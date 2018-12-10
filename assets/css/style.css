@@ -1,0 +1,100 @@
+/* Isaac Wu GifTastic */
+
+body {
+    background: url(../images/gifbg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.gif-logo{
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+.gif-header{
+    height: 80px;
+    padding: 20px;
+    padding-left:55px;
+    font-size: 28px;
+    color: wheat;
+    background: linear-gradient(70deg, rgb(28, 3, 61), white);
+
+    }
+
+/* buttons list */
+.gif-buttons-default{
+    height: 150px;
+    padding: 10px 50px;
+    }
+
+.newbutton-js{
+    margin: 5px;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 0 25px 3px;
+    color: wheat;
+    font-weight: 600;
+    background: linear-gradient(190deg, rgb(28, 3, 61), rgb(161, 134, 196));
+}
+
+.gif-buttons-default :hover{
+    font-weight: 300;
+    background: linear-gradient(20deg, rgb(28, 3, 61), rgb(161, 134, 196));
+}
+
+
+/* gif and rating list */
+.gif-show{
+    height: 600px;
+    margin: 10px 5px 40px 55px;
+    padding: 20px;
+    border: 2px inset;
+    border-radius: 6px;
+    background: rgb(0, 0, 0, .1);
+    overflow: auto;
+}
+
+.newgif-js{
+    position: relative;
+    /* float: left; */
+    padding: 10px 20px;
+}
+
+.newrating-js{
+    position: relative;
+}
+
+/* input search bar */
+.form-search{
+    margin-right: 60px;
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 30px;
+    }
+
+.gif-input{
+    width: 100%;
+    /* padding:6px; */
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    }
+
+#gif-submit{
+    font-size: 20px;
+    padding: 0 10px;
+    margin-left: 2px;
+    border: 1px solid;
+    background:rgb(28, 3, 61, .1);
+    }
+
+footer {
+    float: left;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    font-size: 14px;
+    color: grey;
+    height: 20px;
+    }
