@@ -6,9 +6,10 @@ body {
     background-attachment: fixed;
 }
 
+/* nav bar */
 .gif-logo{
-    height: 35px;
-    margin-bottom: 10px;
+    height: 45px;
+    padding-bottom: 10px;
 }
 
 .gif-header{
@@ -18,20 +19,25 @@ body {
     font-size: 28px;
     color: wheat;
     background: linear-gradient(70deg, rgb(28, 3, 61), white);
-
     }
+
+/* body-no-nav */
+.body-no-nav{
+    margin: 0 60px;
+}
 
 /* buttons list */
 .gif-buttons-default{
-    height: 150px;
-    padding: 10px 50px;
+    position: relative;
+    height: auto;
+    margin: 20px 0;
     }
 
 .newbutton-js{
-    margin: 5px;
+    padding: 0 25px 3px;
+    margin: 5px 1px;
     border: 1px solid;
     border-radius: 3px;
-    padding: 0 25px 3px;
     color: wheat;
     font-weight: 600;
     background: linear-gradient(190deg, rgb(28, 3, 61), rgb(161, 134, 196));
@@ -42,16 +48,27 @@ body {
     background: linear-gradient(20deg, rgb(28, 3, 61), rgb(161, 134, 196));
 }
 
-
 /* gif and rating list */
 .gif-show{
+    width: 100%;
     height: 600px;
-    margin: 10px 5px 40px 55px;
-    padding: 20px;
+    margin-bottom: 40px;
+    padding: 30px;
     border: 2px inset;
     border-radius: 6px;
     background: rgb(0, 0, 0, .1);
     overflow: auto;
+}
+
+.rate-and-gif{
+    float: left;
+    position: relative;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    background: burlywood;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
 }
 
 .newgif-js{
@@ -66,7 +83,7 @@ body {
 
 /* input search bar */
 .form-search{
-    margin-right: 60px;
+    margin: 0 10px;
     font-family: 'Black And White Picture', sans-serif;
     font-size: 30px;
     }
