@@ -9,8 +9,9 @@ function generatebutton() {
 }
 generatebutton();
 
-////////////////////////////////////////////////
-//click or enter search-bar to create new button:
+////////////////////////////////////////////////////
+//click submit button of input to create new button:
+////////////////////////////////////////////////////
 $("#gif-submit").on("click", function () {
     event.preventDefault();
 
@@ -26,43 +27,81 @@ $("#gif-submit").on("click", function () {
     generatebutton();
 })
 
-/////////////////////////////////////////////////////
-//click button in animal list to show rating and gif:
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//click animal button from list, then generate more-gif-button, 10 gifs, rating, and favorite button into the EMPTY BOX:
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $(document).on("click", ".newbutton-js", function () {
+    // why if buttonText = $(".newbutton-js").text(); it will load all buttons texts???????????
     $(".gif-show").empty();
 
     var buttonText = $(this).text();
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + buttonText + "&api_key=MrCk33YTz6WfMMgxax4KaDxkCzsj5oVU&limit=10";
-    // if buttonText = $(".newbutton-js").text(); it will load all buttons texts
-    // why??????????
 
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function (response) {
         for (var i = 0; i < response.data.length; i++) {
-            // it's better to create <div>, and every <div> will hold a pair of gif and rating (use to float left in css):
-            var gifHolder = $("<div>").addClass("rate-and-gif");
-            var gifstill = response.data[i].images.fixed_height_still.url;
-            var gifstart = response.data[i].images.fixed_height.url;
+            if (response.data[i].rating !== "r" && response.data[i].rating !== "pg-13") {
+                // 1. create <div>, and every <div> will hold every pair of gif, rating, and star button:
+                var gifHolder = $("<div>").addClass("rate-and-gif");
 
-            gifHolder.append("<img src='" + gifstill + "' data-still='" + gifstill + "' data-animate='" + gifstart + "' data-state='still' class='newgif-js'>");
-            gifHolder.append("<p class='newrating-js'> Rating: " + response.data[i].rating.toUpperCase() + "</p>");
-            $(".gif-show").append(gifHolder)
-        }
+                // 2. append <img> of GIF when click button
+                var gifstill = response.data[i].images.fixed_height_still.url;
+                var gifstart = response.data[i].images.fixed_height.url;
+                gifHolder.append("<img src='" + gifstill + "' data-still='" + gifstill + "' data-animate='" + gifstart + "' data-state='still' class='newgif-js'>");
 
-        $(document).on("click", ".newgif-js", function () {
-            var state = $(this).attr("data-state");
-            if (state === "still") {
-                $(this).attr("src", $(this).attr("data-animate"));
-                $(this).attr("data-state", "animate");
-            } else {
-                $(this).attr("src", $(this).attr("data-still"));
-                $(this).attr("data-state", "still");
+                // 3. append <p> of RATING when click button
+                gifHolder.append("<p class='newrating-js'>" + buttonText + " / Rating: " + response.data[i].rating.toUpperCase() + "</p>");
+
+                // 4. append <i> of STAR BUTTON (favorite)
+                var favoriteButton = '<i class="fas fa-star favme"></i>'
+                gifHolder.append(favoriteButton)
+
+                // 5. show gif, rating, and star button in empty box
+                $(".gif-show").prepend(gifHolder)
             }
-        })
-    });
+        }
+        //6. generate a More Button at the top of box (put it out of loop, javascript will read brackets from outside to inside)
+        var moreGifButton = '<button class="more-gif-button"><i class="fas fa-caret-square-down"></i></button>'
+        $(".gif-show").prepend(moreGifButton);
+    })
 })
+
+
+/////////////////////////////////////////////////////////
+//click more-gif-button, and prepend 10 more gifs at top:
+/////////////////////////////////////////////////////////
+$(document).on("click", ".more-gif-button", function () {
+
+
+
+})
+
+
+
+//////////////////////////////////////////////
+//click favorite button, inside the EMPTY BOX:
+//////////////////////////////////////////////
+$(document).on("click", ".favme", function () {
+    $(this).toggleClass('active');
+});
+
+//////////////////////////////////////////////////////
+//click gif to still or animate, inside the EMPTY BOX:
+//////////////////////////////////////////////////////
+$(document).on("click", ".newgif-js", function () {
+    if ($(this).attr("data-state") === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+    } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+    }
+});
+
+
+
 
 
 

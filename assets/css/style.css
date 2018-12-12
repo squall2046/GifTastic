@@ -47,17 +47,32 @@ body {
     font-weight: 300;
     background: linear-gradient(20deg, rgb(28, 3, 61), rgb(161, 134, 196));
 }
+/* .gif-show :hover{
+    font-weight: 300;
+    background: linear-gradient(20deg, rgb(28, 3, 61), rgb(161, 134, 196));
+} */
 
 /* gif and rating list */
 .gif-show{
     width: 100%;
     height: 600px;
     margin-bottom: 40px;
-    padding: 30px;
-    border: 2px inset;
-    border-radius: 6px;
+    padding: 10px;
+    /* border: 2px inset; */
+    /* border-radius: 6px; */
     background: rgb(0, 0, 0, .1);
     overflow: auto;
+}
+
+.more-gif-button{
+    text-align: center;
+    padding: 5px 10px;
+    margin: 10px 45%;
+    /* border: 1px solid; */
+    border-radius: 50px;
+    color: rgb(28, 3, 61);
+    font-weight: 600;
+    background: linear-gradient(190deg, wheat, rgb(161, 134, 196));
 }
 
 .rate-and-gif{
@@ -72,14 +87,9 @@ body {
 }
 
 .newgif-js{
-    position: relative;
-    /* float: left; */
-    padding: 10px 20px;
+    padding: 10px;
 }
 
-.newrating-js{
-    position: relative;
-}
 
 /* input search bar */
 .form-search{
@@ -115,3 +125,19 @@ footer {
     color: grey;
     height: 20px;
     }
+
+/* ---------Favorite button----------- */
+.favme {
+    display:block;
+    font-size: ms(2);
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    box-shadow: none;
+    transition: all .2s ease;
+    color: #CBCDCE;
+    margin: 0;
+}
+.favme.active {
+    color: rgb(220, 50, 50);
+}
