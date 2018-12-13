@@ -166,12 +166,12 @@ footer {
     }
     .form-search, .gif-input{
         position: relative;
-        width: 100%;
+        width: 98%;
         left: 0;
         margin:2px;
     }
     #gif-submit{
-        top: 5px;
+        top: 2px;
         right: 5px;
     }
     .empty-box{
