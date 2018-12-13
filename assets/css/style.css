@@ -1,10 +1,22 @@
 /* Isaac Wu GifTastic */
 
 body {
-    background: url(../images/gifbg.jpg);
-    background-size: cover;
-    background-attachment: fixed;
+    /* background: url(../images/gifbg.jpg); */
+    /* background-size: fixed; */
+    /* background-attachment: fixed; */
+
+    /* animate background- */
+    background: linear-gradient(45deg,#fac1ff, #ffd3d3, #bba8ff);
+    animation: Gradient 20s ease infinite;
+    background-size: 1000% 1000%;
+    /* -animate background */
 }
+
+@keyframes Gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
 
 /* nav bar */
 .gif-header{
@@ -80,6 +92,7 @@ body {
     color: wheat;
     font-weight: 600;
     background: linear-gradient(190deg, rgb(0, 0, 0), rgb(161, 134, 196));
+    box-shadow: 0 4px 8px 0 rgba(44, 16, 66, 0.9);
 }
 
 
@@ -172,7 +185,7 @@ footer {
     }
     #gif-submit{
         top: 2px;
-        right: 5px;
+        right: 10px;
     }
     .empty-box{
         width: 100%;
@@ -181,6 +194,10 @@ footer {
     .rate-and-gif, .newgif-js{
         margin:10px 0;
         width: 99%;
+        height: 420px;
+    }
+    .newgif-js{
+        height: 300px;
     }
 
 }

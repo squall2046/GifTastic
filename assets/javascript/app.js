@@ -50,14 +50,14 @@ $(document).on("click", ".newbutton-js", function () {
     // Use buttonText = $(this).attr("data-name"), instead of var buttonText = $(this).attr("data-name");
     // it means create a variable in Global(equal to this variable is outside the function), not in Local(this variable only be readed inside of this function due to the javascript scope reason).
     // So, in line80, the queryURL still can read the buttonText variable inside of this function.
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + buttonText + "&api_key=MrCk33YTz6WfMMgxax4KaDxkCzsj5oVU&limit=" + num;
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=animal+" + buttonText + "&api_key=MrCk33YTz6WfMMgxax4KaDxkCzsj5oVU&limit=" + num;
 
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function (response) {
         for (var i = 0; i < response.data.length; i++) {
-            if (response.data[i].rating !== "r" && response.data[i].rating !== "pg-13") {
+            if (response.data[i].rating !== "r") {
                 // 1. create <div>, and every <div> will hold every pair of gif, rating, and star button:
                 var gifHolder = $("<div>").addClass("rate-and-gif");
 
