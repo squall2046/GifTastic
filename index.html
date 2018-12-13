@@ -1,7 +1,7 @@
 <!-- Isaac Wu GifTastic -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
         crossorigin="anonymous">
     <!-- title logo icon -->
-    <link rel="shortcut icon" href="assets/images/ico.png" type="icon">
+    <link rel="shortcut icon" href="assets/images/ico.png" type="image/x-icon">
 </head>
 
 <body>
@@ -34,7 +34,17 @@
     <!-- nav-bar -->
     <div class="row">
         <div class="col-sm-12">
-            <div class="gif-header"><strong>Gif <img src="assets/images/anigif.gif" class="gif-logo">Tastic</strong></div>
+            <div class="gif-header">
+                <img src="assets/images/204.gif" class="gifhy-logo" alt="gifhy">
+                <div class="header-word"><strong>Gif Tastic</strong>
+                    <h6>| GIPHY API</h6>
+                </div>
+            </div>
+            <!-- input search-bar -->
+            <form class="form-search">
+                <input type="text" placeholder=" add an animal here.." class="gif-input">
+                <button class="btn btn-secondary" type="submit" id="gif-submit"><i class="fas fa-share-square"></i></button>
+            </form>
         </div>
     </div>
 
@@ -50,19 +60,19 @@
 
                 <!-- gif-images & rating list here -->
                 <div class="row">
-                    <div class="col-sm-9">
+                    <div class="col-sm-11 empty-box">
                         <div class="gif-show">
+                            <img src="assets/images/anigif.gif" class="gif-background" alt="gif">
                             <!--  -->
                         </div>
                     </div>
                     <!-- input search-bar -->
-                    <div class="col-sm-3">
+                    <!-- <div class="col-sm-3">
                         <form class="form-search">
-                            <label> add an animal here..</label>
-                            <input type="text" placeholder="Meow~" class="gif-input"><br>
-                            <input type="submit" value="submit" class="btn btn-outline-secondary" id="gif-submit">
+                            <input type="text" placeholder=" add an animal here.." class="gif-input">
+                            <button class="btn btn-secondary" type="submit" id="gif-submit"><i class="fas fa-share-square"></i></button>
                         </form>
-                    </div>
+                    </div> -->
                 </div>
 
             </div> <!-- body without nav bar and footer -->
@@ -70,7 +80,7 @@
     </div>
 
     <footer>
-        <p class="cpright">Copyright &copy; 2018 Isaac Wu</p>
+        <span class="cpright">Copyright &copy; 2018 Isaac Wu</span>
     </footer>
     <!-- jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
