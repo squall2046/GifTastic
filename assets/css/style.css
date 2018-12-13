@@ -27,11 +27,6 @@ body {
     left: 80px;
     top:20px;
 }
-.gif-background{
-    padding: 100px 45%;
-    height: 400px;
-    opacity: .1;
-}
 
 /* nav search bar */
 .form-search{
@@ -56,7 +51,7 @@ body {
     position: absolute;
     right:0px;
     top:0;
-    font-size: 20px;
+    font-size: 19px;
     padding: 5px 10px;
     margin: 5px;
     border: 1px solid;
@@ -93,14 +88,20 @@ body {
 
 
 /* gif and rating list */
-
 .empty-box{
-    margin: 0 20px 40px;
-    padding: 20px;
+    margin: 0 20px 50px;
     border: 2px inset;
     border-radius: 6px;
+    text-align: center;
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 40px;
     background: rgb(0, 0, 0, .1);
     /* overflow: auto; */
+}
+
+.gif-background{
+    margin: 50px 20px;
+    opacity: .5;
 }
 
 .more-gif-button{
@@ -111,15 +112,17 @@ body {
     border-radius: 50px;
     color: rgb(28, 3, 61);
     font-weight: 600;
+    font-size: 16px;
     background: linear-gradient(190deg, wheat, rgb(161, 134, 196));
 }
 
+/* animal gifs */
 .rate-and-gif{
     float: left;
     position: relative;
-    width: 22%;
+    width: 300px;
     height: 300px;
-    margin: 18px;
+    margin: 23px;
     padding: 10px;
     text-align: center;
     background: burlywood;
@@ -128,7 +131,7 @@ body {
 }
 
 .newgif-js{
-    width: 100%;
+    width: 280px;
     height: 200px;
 }
 
@@ -159,6 +162,7 @@ footer {
     color: rgb(220, 50, 50);
 }
 
+/* media query */
 @media (max-width: 675px) {
     .body-no-nav{
         margin: 2px;

@@ -26,6 +26,8 @@ $("#gif-submit").on("click", function () {
     var newAnimal = $(".gif-input").val().trim();
     if (newAnimal.length !== 0) {
         animalList.push(newAnimal);
+    } else {
+        alert("Don't you wanna add an animeow~ ??")
     }
     // clear the input content
     $(".gif-input").val("");
