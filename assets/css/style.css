@@ -60,16 +60,11 @@ body {
     /* background:rgb(28, 3, 61, .1); */
 }
 
-/* body-no-nav */
-.body-no-nav{
-    margin: 0 60px;
-}
-
 /* buttons list */
 .gif-buttons-default{
     position: relative;
     height: auto;
-    margin: 20px 0;
+    margin: 20px 40px;
     }
 
 .gif-buttons-default :hover{
@@ -90,7 +85,8 @@ body {
 
 /* gif and rating list */
 .empty-box{
-    margin: 0 20px 50px;
+    margin-bottom: 50px;
+    padding: 15px;
     border: 2px inset;
     border-radius: 6px;
     text-align: center;
@@ -121,9 +117,9 @@ body {
 .rate-and-gif{
     float: left;
     position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 23px;
+    width: 200px;
+    height: 260px;
+    margin: 10px;
     padding: 10px;
     text-align: center;
     background: burlywood;
@@ -132,8 +128,8 @@ body {
 }
 
 .newgif-js{
-    width: 280px;
-    height: 200px;
+    width: 180px;
+    height: 160px;
 }
 
 footer {
