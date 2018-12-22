@@ -84,7 +84,7 @@ body {
     background: linear-gradient(20deg, rgb(0, 0, 0), rgb(161, 134, 196));
 }
 
-.newbutton-js{
+.newbutton-js, .favpageButton-js{
     padding: 0 25px 3px;
     margin: 5px 1px;
     border: 1px solid;
@@ -135,7 +135,10 @@ body {
     margin: 10px;
     padding: 10px;
     text-align: center;
-    background: burlywood;
+    color: wheat;
+    background: rgb(139, 122, 146);
+    box-shadow: 0 4px 8px 0 rgb(68, 68, 68);
+
     font-family: 'Caveat', cursive;
     font-size: 20px;
 }
@@ -147,7 +150,7 @@ body {
 
 footer {
     float: left;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0px;
     text-align: center;
@@ -168,12 +171,15 @@ footer {
     color: #CBCDCE;
     margin: 0;
 }
-.favme.active {
+.star-color {
     color: rgb(220, 50, 50);
 }
 
 /* media query */
 @media (max-width: 675px) {
+    .gif-header{
+        background: linear-gradient(90deg, rgb(0, 0, 0), rgb(58, 58, 58));
+    }
     .body-no-nav{
         margin: 2px;
     }
