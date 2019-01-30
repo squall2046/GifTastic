@@ -50,10 +50,6 @@ var apiLimit = 10;
 $(document).on("click", ".newbutton-js", function () {
     $(".gif-show").empty();
     buttonText = $(this).attr("data-name");
-    // why if buttonText = $(".newbutton-js").text(); it will load all buttons texts???????????
-    // Use buttonText = $(this).attr("data-name"), instead of var buttonText = $(this).attr("data-name");
-    // it means create a variable in Global(equal to this variable is outside the function), not in Local(this variable only be readed inside of this function due to the javascript scope reason).
-    // So, in line91, the queryURL still can read the buttonText variable inside of this function.
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=animal+" + buttonText + "&api_key=MrCk33YTz6WfMMgxax4KaDxkCzsj5oVU&limit=" + apiLimit.toString();
     console.log(queryURL)
     $.ajax({
